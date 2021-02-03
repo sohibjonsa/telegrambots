@@ -5,8 +5,8 @@ token = '1583466472:AAGguScK6YXMLPCiRKN01kbEkviCw92wmqw'
 url = f'https://api.telegram.org/bot{token}/getUpdates'
 r = requests.get(url)
 data = r.json()
-# updates = data['result']
-
+updates = data['result']
+update = updates[0]
 # for update in updates:
 #     message = update['message']
 #     user = message['from']
@@ -14,5 +14,4 @@ data = r.json()
 #     last = user.get('last_name', '')
 #     print(f'{first} {last}')
 
-pprint(data)
-print(r.url)
+pprint((data)
