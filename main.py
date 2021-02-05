@@ -7,12 +7,13 @@ r = requests.get(url)
 data = r.json()
 updates = data['result']
 
-ms = updates[0]['message']['from']
+print(r.url)
 
 for update in updates:
     message = update['message']
     user = message['from']
+    id = user['id']
+    text = message['text']
     first = user.get('first_name', '')
     last = user.get('last_name', '')
-    print(f'{first} {last}')
-
+    print(f'ID: {id} \n Fullname: {first} {last} \n Message {text}')
