@@ -1,7 +1,8 @@
 import requests
 from pprint import pprint
+import os
 
-token = '1583466472:AAGguScK6YXMLPCiRKN01kbEkviCw92wmqw'
+token = os.environ['TOKEN']
 url = f'https://api.telegram.org/bot{token}/sendMessage'
 p = {
     'chat_id': 81633833,
